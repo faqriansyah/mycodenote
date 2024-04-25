@@ -103,6 +103,25 @@ $person1 = new Person();
 $person1->greeting("Samsul");
 ```
 
+## constructor
+constructor adalah function yang akan dipanggil saat pertama kali objek dibuat 
+
+```
+Class Person {
+  const GENDER = "Pria";
+  var $name;
+
+  function __construct($name) {
+    $this->name = $name;
+  }
+  function greeting($name) {
+    echo "Halo $name, nama saya $this->name dan saya adalah seorang self::GENDER ";
+  }
+}
+
+$person1 = new Person();
+$person1->greeting("Samsul");
+```
 # Akhir
 
 Oke terima kasih
