@@ -119,7 +119,7 @@ Class Person {
   }
 }
 
-$person1 = new Person();
+$person1 = new Person("Budi");
 $person1->greeting("Samsul");
 ```
 # Akhir
