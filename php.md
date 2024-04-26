@@ -16,7 +16,7 @@ jika merujuk pada pengertian yang ada di Wikipedia yang sudah diterjemahkan, Cla
 
 Class adalah template kode program yang dapat diperluas untuk membuat objek, memberikan nilai awal untuk status (variabel anggota) dan implementasi perilaku (fungsi atau metode anggota).
 
-baru pengertian tersebut sudah dijelaskan bahwa Class memiliki nilai awal yang akan bisa dibuat variasinya saat objek dibuat dari sebuah Class.
+Dari pengertian tersebut sudah dijelaskan bahwa Class memiliki nilai awal yang akan bisa dibuat variasinya saat objek dibuat dari sebuah Class.
 
 tidak apa-apa kalau masih terkesan abstrak, yang penting terus belajar.
 
