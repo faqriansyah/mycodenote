@@ -9,8 +9,19 @@ Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan
 - Objek adalah data yang berisi properties/attributes dan method/function/behavior
 - Class adalah blueprint atau cetakan untuk membuat objek, berisi deklarasi semua properties dan function yang dimiliki object
 
-## Membuat Class
-Untuk membuat class adalah dengan menggunakan keyword `class`
+## Class
+Class bisa dibayangkan sebagai blueprint atau sebagai cetakan untuk membuat objek, karena memang objek itu adalah hasil instance dari sebuah Class
+
+jika merujuk pada pengertian yang ada di Wikipedia yang sudah diterjemahkan, Class memiliki pengertian sebagai berikut :
+
+Class adalah template kode program yang dapat diperluas untuk membuat objek, memberikan nilai awal untuk status (variabel anggota) dan implementasi perilaku (fungsi atau metode anggota).
+
+baru pengertian tersebut sudah dijelaskan bahwa Class memiliki nilai awal yang akan bisa dibuat variasinya saat objek dibuat dari sebuah Class.
+
+tidak apa-apa kalau masih terkesan abstrak, yang penting terus belajar.
+
+
+Untuk membuat class adalah dengan menggunakan keyword `class`.
 
 ```
 Class Person {
@@ -18,7 +29,11 @@ Class Person {
 }
 ```
 
+dalam kode di atas adalah sintaks untuk membuat sebuah Class.
+
 ## Object
+Class yang sudah dibuat tidak akan berguna jika tidak digunakan untuk membuat objek, maka dari itu kita harus membuat instance dari Class tersebut. 
+
 Objek adalah hasil instance dari class, untuk menggunakan object, gunakan keyword `new` diikuti nama class dan ()
 
 ```
@@ -26,7 +41,9 @@ $person1 = new Person();
 ```
 
 ## Properties
-Adalah data (variabel) yanng disimpan di dalam object, untuk membuatnya dengan menggunakan keyword `var` lalu nama propertiesnya
+di dalam sebuah kelas kita bisa membuat sebuah variabel lokal yang disebut properties.
+
+Properties Adalah data (variabel) yanng disimpan di dalam object, untuk membuatnya dengan menggunakan keyword `var` lalu nama propertiesnya
 
 ```
 Class Person {
@@ -35,6 +52,14 @@ Class Person {
 ```
 
 Untuk bisa mengakses value dari properties, gunakan `->`
+
+```
+$person1 = new Person();
+
+echo $person1->name;
+```
+
+properti juga bisa dimodifikasi valuenya dengan menggunakan objek 
 
 ```
 $person1 = new Person();
