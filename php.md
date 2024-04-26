@@ -1,7 +1,7 @@
 # mycodingnote
 Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan belajar, yang didasarkan pada course-course berikut :
 1. Programmer Zaman Now - TUTORIAL PHP OOP BAHASA INDONESIA : https://youtu.be/_P2t0lCzU-Q?si=iE2RYr11tIr7kBdq
-2. Study.com - oop-object-oriented-programming-objects-classes-interfaces.html : https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes-interfaces.html#:~:text=A method in object-oriented,and class is called binding.
+2. Study.com - oop-object-oriented-programming-objects-classes-interfaces.html : https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes-interfaces.html
 
 # PHP OOP (DASAR)
 
