@@ -1,6 +1,7 @@
 # mycodingnote
 Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan belajar, yang didasarkan pada course-course berikut :
 1. Programmer Zaman Now - TUTORIAL PHP OOP BAHASA INDONESIA : https://youtu.be/_P2t0lCzU-Q?si=iE2RYr11tIr7kBdq
+2. Study.com - oop-object-oriented-programming-objects-classes-interfaces.html : https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes-interfaces.html#:~:text=A method in object-oriented,and class is called binding.
 
 # PHP OOP (DASAR)
 
@@ -64,11 +65,15 @@ properti juga bisa dimodifikasi valuenya dengan menggunakan objek
 ```
 $person1 = new Person();
 
-echo $person1->name;
+echo $person1->name = "Budi";
 ```
 
 ## Function
-function/method bisa dideklarasikan di dalam class dan diakses menggunakan `->`
+ketika objek dibuat kita menginginkan agar objek tersebut bisa melakukan sesuatu, kenapa Method pun berperan di sini
+
+Method bisa didefinisikan sebagai "perilaku" suatu objek.
+
+Function/method bisa dideklarasikan di dalam class dan diakses menggunakan `->`
 
 ```
 Class Person {
@@ -81,11 +86,12 @@ Class Person {
 
 $person1 = new Person();
 $person1->greeting("Samsul");
-
 ```
 
 ## this
-`this` digunakan untuk mengakses properties dari dalam class yang sama
+kita akan membutuhkan value dari sebuah fakultas yang berada di dalam kelas, seprrti yang sudah dijelaskan sebelumnya untuk bisa mengakses value dari sebuah kelas kita bisa menggunakan tanda `->`.
+
+Namun jika properties tersebut berada di dalam kelas yang sama maka kita bisa menggunakan kata kunci `self`
 
 ```
 Class Person {
@@ -101,7 +107,9 @@ $person1->greeting("Samsul");
 ```
 
 ## constant
-constant adalah data yang tidak bisa diubah, untuk membuatnya kita bisa menggunakan keyword `const` diikuti nama constantnya. Untuk bisa mengaksesnya gunakanlah `NamaClass::NamaConstant`
+constant adalah data yang tidak bisa diubah, biasanya digunakan untuk menyimpan data permanen untuk sebuah Class. Misalnya untuk versi aplikasi.
+
+Untuk membuatnya kita bisa menggunakan keyword `const` diikuti nama constantnya. Untuk bisa mengaksesnya gunakanlah `NamaClass::NamaConstant`
 
 ```
 Class Person {
@@ -111,7 +119,7 @@ Class Person {
 echo Person::GENDER;
 ```
 
-## self keyword
+## self keyword 
 `self` merupakan kata kunci yang digunakan untuk mengakses constant jika di dalam class yang sama, alih-alih menggunakan `NamaClass::NamaConstant`, kita bisa menggunakan `self::NamaConstant`
 
 ```
@@ -129,7 +137,11 @@ $person1->greeting("Samsul");
 ```
 
 ## constructor
-constructor adalah function yang akan dipanggil saat pertama kali objek dibuat 
+Dalam pengertian pemrograman umum, constructor berperan sebagai function yang akan pertama kali dipanggil saat instance dari sebuah kelas itu dibuat. 
+
+Constructor bisa menerima parameter seperti halnya function pada umumnya. 
+
+Untuk bisa membuat Constructor kita harus menggunakan nama constructor __construct()
 
 ```
 Class Person {
@@ -149,7 +161,7 @@ $person1->greeting("Samsul");
 ```
 # Akhir
 
-Oke terima kasih
+Oke terima kasih sudah membaca, keep learning
 
 
 
