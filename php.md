@@ -240,6 +240,7 @@ class Toy extends Produk
 {
   function showProduct() 
   {
+     echo "Produk mainan, nama : $this->name, harga $this->price";
   }
 }
 ```
@@ -311,6 +312,36 @@ require_once "class.php";
 
 use foo\baa\Foo as foo1;
 use foo\baa2\Foo as foo2
+```
+
+## Visibility
+Visibility menentukan dimana saja properties, function, constant bisa diakses. Ada 3 visibilitas :
+
+1. Public 
+2. Protected
+3. Private
+
+Public : Kode ini akan berhasil dijalankan karena semua yang ada di dalam class adalah public
+```
+Class Person {
+  public string $name = "Budi";
+
+  public function sayHi() {
+    echo "Halo dari method!";
+  }
+  public function greeting($name) {
+    echo "Halo $name, nama saya $this->name";
+    $this->sayHi();
+  }
+}
+
+$person1 = new Person();
+$person1->greeting("Samsul");
+```
+
+Protected : kode ini akan error karena $name adalah protected
+```
+
 ```
 
 # Akhir
