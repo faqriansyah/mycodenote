@@ -16,6 +16,7 @@ Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan
 - Constant
 - Self 
 - Constructor & Destructor 
+- Inheritance
 - Namespace
 - Import (namespace)
 - Visibility
@@ -219,6 +220,30 @@ $person1 = new Person("Budi");
 $person1->greeting("Samsul");
 ```
 
+## Inheritance (pewarisan)
+dan hari thanks memungkinkan kita untuk bisa memiliki properti, perilaku, dan constant dari class lain (disebut parent) 
+
+product.php
+```
+class Produk 
+{
+  var $name;
+  var $price;
+  function __construct($name, $price) 
+  {
+    $this->name = $name;
+    $this->price = $price;
+  }
+}
+
+class Toy extends Produk
+{
+  function showProduct() 
+  {
+  }
+}
+```
+
 ## Namespace 
 Saat kita membuat sebuah aplikasi kita akan banyak membuat kelas, banyaknya kelas akan membuat pembuatan aplikasi semakin rumit, karena class-class yang ada tidak terorganisir dengan baik
 
@@ -230,8 +255,10 @@ class.php
 ```
 namespace foo\baa;
 
-class Foo {
-  function sayHi($name) {
+class Foo 
+{
+  function sayHi($name) 
+  {
     echo "Hi $name";
   }
 }
