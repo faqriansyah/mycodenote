@@ -64,8 +64,7 @@ properti juga bisa dimodifikasi valuenya dengan menggunakan objek
 
 ```
 $person1 = new Person();
-
-echo $person1->name = "Budi";
+$person1->name = "Budi";
 ```
 
 ## Function
