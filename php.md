@@ -68,7 +68,7 @@ $person1->name = "Budi";
 ```
 
 ## Function
-ketika objek dibuat kita menginginkan agar objek tersebut bisa melakukan sesuatu, kenapa Method pun berperan di sini
+ketika objek dibuat kita menginginkan agar objek tersebut bisa melakukan sesuatu, maka Method pun berperan di sini
 
 Method bisa didefinisikan sebagai "perilaku" suatu objek.
 
@@ -88,9 +88,9 @@ $person1->greeting("Samsul");
 ```
 
 ## this
-kita akan membutuhkan value dari sebuah fakultas yang berada di dalam kelas, seprrti yang sudah dijelaskan sebelumnya untuk bisa mengakses value dari sebuah kelas kita bisa menggunakan tanda `->`.
+kita akan membutuhkan value dari sebuah properties atau method yang berada di dalam kelas, seprrti yang sudah dijelaskan sebelumnya untuk bisa mengakses value dari sebuah kelas kita bisa menggunakan tanda `->`.
 
-Namun jika properties tersebut berada di dalam kelas yang sama maka kita bisa menggunakan kata kunci `self`
+Namun jika properties tersebut berada di dalam kelas yang sama maka kita bisa menggunakan kata kunci `this`
 
 ```
 Class Person {
@@ -98,6 +98,25 @@ Class Person {
 
   function greeting($name) {
     echo "Halo $name, nama saya $this->name";
+  }
+}
+
+$person1 = new Person();
+$person1->greeting("Samsul");
+```
+
+jika kita ingin mengakses sebuah method maka caranya adalah seperti ini 
+
+```
+Class Person {
+  var $name = "Budi";
+
+  function sayHi() {
+    echo "Halo dari method!";
+  }
+  function greeting($name) {
+    echo "Halo $name, nama saya $this->name";
+    $this->sayHi();
   }
 }
 
@@ -135,8 +154,8 @@ $person1 = new Person();
 $person1->greeting("Samsul");
 ```
 
-## constructor
-Dalam pengertian pemrograman umum, constructor berperan sebagai function yang akan pertama kali dipanggil saat instance dari sebuah kelas itu dibuat. 
+## constructor dan destructor 
+Constructor berperan sebagai function yang akan pertama kali dipanggil saat instance dari sebuah kelas itu dibuat. 
 
 Constructor bisa menerima parameter seperti halnya function pada umumnya. 
 
@@ -158,6 +177,32 @@ Class Person {
 $person1 = new Person("Budi");
 $person1->greeting("Samsul");
 ```
+
+sementara destructor adalah kebalikan dari constructor, akan dipanggil ketika program selesai. Tapi destructor tidak bisa menerima parameter. 
+
+untuk membuatnya kita harus menggunakan nama __destruct()
+
+```
+Class Person {
+  const GENDER = "Pria";
+  var $name;
+
+  function __construct($name) {
+    $this->name = $name;
+  }
+  function greeting($name) {
+    echo "Halo $name, nama saya $this->name dan saya adalah seorang self::GENDER ";
+  }
+
+  function __destruct() {
+    echo "Program Selesai";
+  }
+}
+
+$person1 = new Person("Budi");
+$person1->greeting("Samsul");
+```
+
 # Akhir
 
 Oke terima kasih sudah membaca, keep learning
