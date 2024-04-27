@@ -336,13 +336,51 @@ Class Person {
 }
 
 $person1 = new Person();
-$person1->greeting("Samsul");
+
+echo $person1->name;
 ```
 
-Protected : kode ini akan error karena $name adalah protected
+Protected : kode ini akan error karena $name adalah protected, protected hanya bisa diakses di dalam subclass dan di dalam class, tidak di publik
+```
+Class Person {
+  protected $name = "Budi";
+
+  function sayHi() {
+    echo "Halo dari method!";
+  }
+  function greeting($name) {
+    echo "Halo $name, nama saya $this->name";
+    $this->sayHi();
+  }
+}
+
+$person1 = new Person();
+
+echo $person1->name;
 ```
 
+Di dalam subclass:
+
 ```
+Class Person {
+  protected $name = "Budi";
+
+  function sayHi() {
+    echo "Halo dari method!";
+  }
+  function greeting($name) {
+    echo "Halo $name, nama saya $this->name";
+    $this->sayHi();
+  }
+}
+
+Class Man extends Person {
+  function Hi() {
+    echo "Halo, $this->name";
+  }
+}
+```
+
 
 # Akhir
 
