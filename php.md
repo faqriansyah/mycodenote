@@ -3,7 +3,23 @@ Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan
 1. Programmer Zaman Now - TUTORIAL PHP OOP BAHASA INDONESIA : https://youtu.be/_P2t0lCzU-Q?si=iE2RYr11tIr7kBdq
 2. Study.com - oop-object-oriented-programming-objects-classes-interfaces.html : https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes-interfaces.html
 
+
+
 # PHP OOP (DASAR)
+
+## Silabus 
+- Class
+- Object
+- Properties
+- Function
+- This
+- Constant
+- Self 
+- Constructor & Destructor 
+- Namespace
+- Import (namespace)
+- Visibility
+
 
 ## Apa itu OOP?
 - Pemrograman berbasis objek
@@ -201,6 +217,73 @@ Class Person {
 
 $person1 = new Person("Budi");
 $person1->greeting("Samsul");
+```
+
+## Namespace 
+Saat kita membuat sebuah aplikasi kita akan banyak membuat kelas, banyaknya kelas akan membuat pembuatan aplikasi semakin rumit, karena class-class yang ada tidak terorganisir dengan baik
+
+Maka di sinilah peran Namespace bermain, Namespace digunakan untuk mengelompokkan class-class sesuai dengan fungsinya. 
+
+contoh dari penggunaan Namespace adalah seperti ini
+
+class.php
+```
+namespace foo\baa;
+
+class Foo {
+  function sayHi($name) {
+    echo "Hi $name";
+  }
+}
+```
+
+main.php 
+
+```
+require_once "class.php";
+
+$foo1 = new foo\baa\Foo;
+$foo1->sayHi("Udin");
+```
+
+Sekilas Namespace seperti folder yang menyimpan class-class. 
+
+## import (use)
+`use` digunakan untuk mengimpor namespace, traits, dan function.
+
+contoh penggunaan use adalah sebagai berikut
+
+class.php
+```
+namespace foo\baa;
+
+class Foo {
+  function sayHi($name) {
+    echo "Hi $name";
+  }
+}
+```
+
+main.php 
+
+```
+require_once "class.php";
+
+use foo\baa\Foo;
+
+$foo1 = new Foo;
+$foo1->sayHi("Udin");
+```
+
+namun perlu diingat bahwa jika nama class sama, maka akan terjadi error, walaupun nama namespacenya berbeda.
+
+untuk mengatasi masalah itu, hp sudah menyediakan solusi dengan menyediakan fitur alias seperti ini
+
+```
+require_once "class.php";
+
+use foo\baa\Foo as foo1;
+use foo\baa2\Foo as foo2
 ```
 
 # Akhir
