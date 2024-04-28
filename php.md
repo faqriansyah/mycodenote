@@ -2,6 +2,7 @@
 Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan belajar, yang didasarkan pada course-course berikut :
 1. Programmer Zaman Now - TUTORIAL PHP OOP BAHASA INDONESIA : https://youtu.be/_P2t0lCzU-Q?si=iE2RYr11tIr7kBdq
 2. Study.com - oop-object-oriented-programming-objects-classes-interfaces.html : https://study.com/academy/lesson/oop-object-oriented-programming-objects-classes-interfaces.html
+3. Phptutorial.net - How to overrding method in PHP : https://www.phptutorial.net/php-oop/php-override-method/
 
 
 
@@ -17,6 +18,7 @@ Ini adalah halaman github yang ditujukan untuk diri saya sendiri sebagai catatan
 - Self 
 - Constructor & Destructor 
 - Inheritance
+- Method Overriding
 - Namespace
 - Import (namespace)
 - Visibility
@@ -243,6 +245,35 @@ class Toy extends Produk
      echo "Produk mainan, nama : $this->name, harga $this->price";
   }
 }
+```
+
+## Method Overriding
+
+```
+class Robot 
+{
+	var $name;
+	var $model;
+	function __construct($name, $model) {
+		$this->name = $name;
+		$this->model = $model;
+	}
+	public final function activate() {
+		echo "Robot $this->name ($this->model) Activated " . PHP_EOL;
+	}
+}
+
+class Robot1 extends Robot {
+	public function activate() {
+		echo "Robot $this->name ($this->model) Is Online" . PHP_EOL;
+	}	
+}
+
+$robotMaster = new Robot("Sofia", "XO889");
+$robotMaster->activate();
+
+$robot = new Robot1("Dani", "DNN121");
+$robot->activate();
 ```
 
 ## Namespace 
